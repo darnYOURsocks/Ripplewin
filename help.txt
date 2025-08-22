@@ -1,0 +1,5 @@
+powershell -ExecutionPolicy Bypass -File .\make_ripplepy.ps1
+cd ripplepy
+python app.py
+py -m pip install pyinstaller
+.\build.ps1
