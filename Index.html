@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeStyle UK | TPSai Operations Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --void: #030305;
+            --emerald: #10b981;
+            --cyan: #06b6d4;
+            --amber: #f59e0b;
+            --slate: #1e293b;
+        }
+        body {
+            background-color: var(--void);
+            color: #e2e8f0;
+            font-family: 'Inter', sans-serif;
+        }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glow-emerald { text-shadow: 0 0 10px rgba(16, 185, 129, 0.5); }
+        .glow-cyan { text-shadow: 0 0 10px rgba(6, 182, 212, 0.5); }
+        .glow-amber { text-shadow: 0 0 10px rgba(245, 158, 11, 0.5); }
+        
+        /* Tab functionality */
+        .tab-content { display: none; animation: fadeIn 0.3s ease-in-out; }
+        .tab-content.active { display: block; }
+        .tab-btn.active { border-bottom: 2px solid var(--cyan); color: var(--cyan); }
+        
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* Range slider styling */
+        input[type=range] {
+            accent-color: var(--cyan);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="border-b border-gray-800 bg-[#0a0a0f] p-4 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div>
+                <h1 class="text-2xl font-bold text-white tracking-wide"><span class="text-emerald-400">SafeStyle</span> <span class="text-cyan-400">TPSai</span> Hub</h1>
+                <p class="text-xs text-gray-400 font-mono mt-1">AREA CANVASS MANAGER // SYSTEM PROTOCOL v2.0</p>
+            </div>
+            <div class="text-right hidden sm:block">
+                <p class="text-xs font-mono text-cyan-400 glow-cyan">STATUS: KERNEL ARMED</p>
+                <p class="text-xs font-mono text-gray-400">ENTROPY LOSS: 0.00%</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-[#0a0a0f] border-b border-gray-800">
+        <div class="max-w-7xl mx-auto flex overflow-x-auto">
+            <button onclick="openTab('overview')" class="tab-btn active px-6 py-3 text-sm font-semibold text-gray-400 hover:text-white transition whitespace-nowrap">I. End-to-Start Blueprint</button>
+            <button onclick="openTab('territory')" class="tab-btn px-6 py-3 text-sm font-semibold text-gray-400 hover:text-white transition whitespace-nowrap">II. Territory & Physics</button>
+            <button onclick="openTab('momentum')" class="tab-btn px-6 py-3 text-sm font-semibold text-gray-400 hover:text-white transition whitespace-nowrap">III. Momentum Magic</button>
+            <button onclick="openTab('resilience')" class="tab-btn px-6 py-3 text-sm font-semibold text-gray-400 hover:text-white transition whitespace-nowrap">IV. Team Ecology</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow p-4 sm:p-8 max-w-7xl mx-auto w-full">
+
+        <!-- TAB 1: OVERVIEW -->
+        <section id="overview" class="tab-content active">
+            <div class="mb-8">
+                <h2 class="text-3xl font-light mb-2">The <span class="text-cyan-400 font-semibold">End-to-Start</span> Master Plan</h2>
+                <p class="text-gray-400 max-w-3xl">A structural overview of the £1,000/week Area Manager operational loop. We don't rely on willpower (climbing hills); we engineer systems (digging wells) where high performance becomes gravity.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Logic Card 1 -->
+                <div class="glass-panel p-6 rounded-lg border-l-2 border-emerald-500">
+                    <h3 class="font-mono text-emerald-400 mb-3 text-sm tracking-widest">PHASE 01: THE RESULT (THE START)</h3>
+                    <p class="text-2xl font-bold mb-1">£1,000 / Week</p>
+                    <p class="text-sm text-gray-400 mb-4">Required production to clear net target.</p>
+                    <ul class="text-sm space-y-2 text-gray-300">
+                        <li class="flex items-center"><span class="text-emerald-400 mr-2">✓</span> 2 Heritage Sales (Avg £12k)</li>
+                        <li class="flex items-center"><span class="text-emerald-400 mr-2">✓</span> 15 Raw Leads Banked</li>
+                        <li class="flex items-center"><span class="text-emerald-400 mr-2">✓</span> Total Pipeline: ~£24,000</li>
+                    </ul>
+                </div>
+
+                <!-- Logic Card 2 -->
+                <div class="glass-panel p-6 rounded-lg border-l-2 border-cyan-500">
+                    <h3 class="font-mono text-cyan-400 mb-3 text-sm tracking-widest">PHASE 02: THE TPS CONVERSION</h3>
+                    <p class="text-2xl font-bold mb-1">7:1 Ratio</p>
+                    <p class="text-sm text-gray-400 mb-4">Lead-to-Sale structural invariant.</p>
+                    <ul class="text-sm space-y-2 text-gray-300">
+                        <li class="flex items-center"><span class="text-cyan-400 mr-2">⚡</span> 150 meaningful conversations</li>
+                        <li class="flex items-center"><span class="text-cyan-400 mr-2">⚡</span> 450 targeted doors hit</li>
+                        <li class="flex items-center"><span class="text-cyan-400 mr-2">⚡</span> Emotional-Logical alignment</li>
+                    </ul>
+                </div>
+
+                <!-- Logic Card 3 -->
+                <div class="glass-panel p-6 rounded-lg border-l-2 border-amber-500">
+                    <h3 class="font-mono text-amber-400 mb-3 text-sm tracking-widest">PHASE 03: THE SHADOW INPUTS</h3>
+                    <p class="text-2xl font-bold mb-1">The Rudder</p>
+                    <p class="text-sm text-gray-400 mb-4">Daily metrics that guarantee the outcome.</p>
+                    <ul class="text-sm space-y-2 text-gray-300">
+                        <li class="flex items-center"><span class="text-amber-400 mr-2">⚲</span> Bounce Time < 45 seconds</li>
+                        <li class="flex items-center"><span class="text-amber-400 mr-2">⚲</span> Rapport Time > 45 mins/day</li>
+                        <li class="flex items-center"><span class="text-amber-400 mr-2">⚲</span> Article 4 "High Yield" deployment</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-10 glass-panel p-6 rounded-lg">
+                <h3 class="text-xl font-semibold mb-4 text-white">The TPSai Manager's "POP" (Problem-Obstacle-Path)</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-[#0f172a] p-4 rounded border border-gray-700">
+                        <h4 class="text-red-400 font-mono text-xs mb-2">PROBLEM (P)</h4>
+                        <p class="text-sm text-gray-300">Unpredictable sales, fluctuating team morale, high turnover of canvassers.</p>
+                    </div>
+                    <div class="bg-[#0f172a] p-4 rounded border border-gray-700">
+                        <h4 class="text-amber-400 font-mono text-xs mb-2">OBSTACLE (O)</h4>
+                        <p class="text-sm text-gray-300">Relying on willpower instead of systems. Treating the job as a "numbers game" rather than a "resonance game."</p>
+                    </div>
+                    <div class="bg-[#0f172a] p-4 rounded border border-gray-700">
+                        <h4 class="text-emerald-400 font-mono text-xs mb-2">PATH (P)</h4>
+                        <p class="text-sm text-gray-300">Deploy the N(z) Protocol: Route teams to structurally primed towns, track shadow momentum, and enforce systemic resets.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 2: TERRITORY -->
+        <section id="territory" class="tab-content">
+             <div class="mb-8">
+                <h2 class="text-3xl font-light mb-2">Territory: The <span class="text-emerald-400 font-semibold">Abbots Langley</span> Pattern</h2>
+                <p class="text-gray-400 max-w-3xl">Identifying the structural invariants of high-yield canvassing terrain. We target 1950s-70s semi-detached loops and strict Article 4 Conservation Zones.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Map Data -->
+                <div class="glass-panel p-6 rounded-lg">
+                    <h3 class="font-mono text-cyan-400 mb-4 flex justify-between">
+                        <span>PRIORITY DEPLOYMENT MAP</span>
+                        <span>[HEMEL + 50 MILES]</span>
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="p-3 bg-[#0f172a] rounded border border-gray-700">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="text-white font-semibold">Tier 1: The "Heritage" Trio (High Yield)</h4>
+                                <span class="text-xs bg-emerald-500/20 text-emerald-400 px-2 py-1 rounded">AOV: £12k-£22k</span>
+                            </div>
+                            <p class="text-sm text-gray-400 mb-2">Strict Article 4 control. Pitch: "Planning Concierge & Heritage uPVC/Timber."</p>
+                            <div class="flex gap-2 text-xs font-mono text-cyan-300">
+                                <span>BERKHAMSTED</span> | <span>TRING</span> | <span>ST ALBANS</span>
+                            </div>
+                        </div>
+
+                        <div class="p-3 bg-[#0f172a] rounded border border-gray-700">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="text-white font-semibold">Tier 2: The "Hybrid Loops" (High Volume)</h4>
+                                <span class="text-xs bg-cyan-500/20 text-cyan-400 px-2 py-1 rounded">AOV: £6k-£10k</span>
+                            </div>
+                            <p class="text-sm text-gray-400 mb-2">Abbots Langley clones. 1960s estates. Pitch: "Energy Hedge / 2026 Thermal Break."</p>
+                            <div class="flex gap-2 text-xs font-mono text-cyan-300 flex-wrap">
+                                <span>REDBOURN</span> | <span>WHEATHAMPSTEAD</span> | <span>FLITWICK</span> | <span>HAZLEMERE</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kitsbury Math -->
+                <div class="glass-panel p-6 rounded-lg border-l-4 border-amber-500">
+                    <h3 class="font-mono text-amber-400 mb-4">THE KITSBURY ROAD MATHEMATICAL MODEL</h3>
+                    <p class="text-sm text-gray-300 mb-6">A high-friction environment requires a closed-loop logical conversion model. We sell the <span class="italic">solution to the legal headache</span>, not the plastic.</p>
+                    
+                    <div class="relative">
+                        <!-- Funnel -->
+                        <div class="flex flex-col items-center space-y-2">
+                            <div class="w-full bg-[#1e293b] p-3 text-center rounded border border-gray-700">
+                                <p class="text-2xl font-bold text-white">24 Raw Leads</p>
+                                <p class="text-xs text-gray-400">"Free Feasibility Check" Hook</p>
+                            </div>
+                            <div class="h-6 border-l-2 border-dashed border-gray-600"></div>
+                            <div class="w-3/4 bg-[#1e293b] p-3 text-center rounded border border-gray-700">
+                                <p class="text-2xl font-bold text-cyan-400">6 Pitched</p>
+                                <p class="text-xs text-gray-400">Decision Maker + Technical Fit</p>
+                            </div>
+                            <div class="h-6 border-l-2 border-dashed border-gray-600"></div>
+                            <div class="w-1/2 bg-[#1e293b] p-3 text-center rounded border border-emerald-500/50 shadow-[0_0_15px_rgba(16,185,129,0.2)]">
+                                <p class="text-2xl font-bold text-emerald-400">2 Sales</p>
+                                <p class="text-xs text-gray-400">Est. Return: £20,500</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 3: MOMENTUM MAGIC (INTERACTIVE) -->
+        <section id="momentum" class="tab-content">
+             <div class="mb-8">
+                <h2 class="text-3xl font-light mb-2">The <span class="text-amber-400 font-semibold">Momentum Magic</span> Tracker</h2>
+                <p class="text-gray-400 max-w-3xl">Using the "Shadow Data" (The Rudder) to predict the outcome (The Current). This calculator uses the Ŋ(z) integration principle: $IC = (Y / X) \times (\text{Multiplier}) \times (\text{AOV})$.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Controls -->
+                <div class="glass-panel p-6 rounded-lg">
+                    <h3 class="font-mono text-white mb-6">INPUT LAYER: THE RUDDER</h3>
+                    
+                    <div class="mb-6">
+                        <label class="flex justify-between text-sm mb-2">
+                            <span class="text-cyan-400">Bounce Time (X)</span>
+                            <span id="bounceVal" class="font-mono text-white">45s</span>
+                        </label>
+                        <input type="range" id="bounceInput" min="10" max="180" value="45" class="w-full" oninput="calculateMomentum()">
+                        <p class="text-xs text-gray-500 mt-1">Seconds between doors. Low = High Velocity / Low Friction.</p>
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="flex justify-between text-sm mb-2">
+                            <span class="text-emerald-400">Rapport Time (Y)</span>
+                            <span id="rapportVal" class="font-mono text-white">45m</span>
+                        </label>
+                        <input type="range" id="rapportInput" min="0" max="120" value="45" class="w-full" oninput="calculateMomentum()">
+                        <p class="text-xs text-gray-500 mt-1">Total minutes in deep conversation today. High = Strong Anchor.</p>
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="block text-sm text-gray-300 mb-2">Territory Multiplier (Difficulty)</label>
+                        <select id="territoryInput" class="w-full bg-[#0f172a] border border-gray-700 text-white rounded p-2 text-sm focus:outline-none focus:border-cyan-500" onchange="calculateMomentum()">
+                            <option value="1.0">Standard Estate (e.g., Flitwick) - 1.0x</option>
+                            <option value="1.5" selected>Heritage / Article 4 (e.g., Berkhamsted) - 1.5x</option>
+                            <option value="2.0">High-Value Detached (e.g., Cobham) - 2.0x</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Output -->
+                <div class="glass-panel p-6 rounded-lg flex flex-col justify-center relative overflow-hidden">
+                    <!-- Background aesthetic -->
+                    <div class="absolute -right-10 -bottom-10 opacity-10 font-mono text-[10rem] pointer-events-none">Ŋ(z)</div>
+                    
+                    <h3 class="font-mono text-gray-400 mb-2 text-sm text-center">MANIFESTATION LAYER</h3>
+                    <div class="text-center mb-6">
+                        <p class="text-sm text-gray-400 mb-1">State Analysis:</p>
+                        <h4 id="stateOutput" class="text-2xl font-bold text-cyan-400 glow-cyan">"Momentum Magic"</h4>
+                        <p id="stateDesc" class="text-sm text-gray-300 mt-2">You are in the flow. The current is pulling you toward inevitable success.</p>
+                    </div>
+
+                    <div class="bg-[#0f172a] border border-gray-700 rounded-lg p-6 text-center">
+                        <p class="text-xs font-mono text-gray-500 mb-2">PROJECTED INEVITABLE COMMISSION (72 HR WINDOW)</p>
+                        <p id="commissionOutput" class="text-4xl font-bold text-emerald-400 glow-emerald">£450</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 4: TEAM RESILIENCE -->
+        <section id="resilience" class="tab-content">
+             <div class="mb-8">
+                <h2 class="text-3xl font-light mb-2">Team Ecology & <span class="text-cyan-400 font-semibold">Structural Stability</span></h2>
+                <p class="text-gray-400 max-w-3xl">Managing a team is managing an ecosystem. Using the TPS (Tri-Pattern-Success) framework, we engineer checkpoints to prevent entropy and maintain the $\psi$-Vector.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- The 90 Min Reset -->
+                <div class="glass-panel p-6 rounded-lg border-l-2 border-cyan-500 hover:bg-[#1e293b] transition duration-300">
+                    <div class="flex items-start">
+                        <div class="bg-cyan-900/30 p-3 rounded-full mr-4">
+                            <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-white mb-1">The 90-Minute Dip & Reset</h3>
+                            <p class="text-sm text-gray-400 mb-3">Trainees hit a predictable cognitive dip every 90 minutes. If left unmanaged, morale crashes. <span class="text-cyan-300 font-mono text-xs bg-cyan-900/30 px-1">BIO_NODE_003</span></p>
+                            <p class="text-sm text-gray-300 italic border-l-2 border-gray-600 pl-3">"Don't react to fatigue, schedule it. Run solo for 90 mins, then trigger a physical regroup and reset."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- End of Day Net Casting -->
+                <div class="glass-panel p-6 rounded-lg border-l-2 border-emerald-500 hover:bg-[#1e293b] transition duration-300">
+                    <div class="flex items-start">
+                        <div class="bg-emerald-900/30 p-3 rounded-full mr-4">
+                            <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-white mb-1">End-of-Day Net Casting</h3>
+                            <p class="text-sm text-gray-400 mb-3">Reframing the final hours not as "winding down" but as a fresh start, preventing the collapse of effort. <span class="text-emerald-300 font-mono text-xs bg-emerald-900/30 px-1">PHYS_NODE_014</span></p>
+                            <p class="text-sm text-gray-300 italic border-l-2 border-gray-600 pl-3">"At 4:00 PM, initiate a 10-minute reset. The most valuable leads are caught when the street is quiet and others have gone home."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 Minute Doodle Break -->
+                <div class="glass-panel p-6 rounded-lg border-l-2 border-amber-500 hover:bg-[#1e293b] transition duration-300">
+                    <div class="flex items-start">
+                        <div class="bg-amber-900/30 p-3 rounded-full mr-4">
+                            <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-white mb-1">The Low-Pass Filter (Doodle Break)</h3>
+                            <p class="text-sm text-gray-400 mb-3">Phones create high-entropy noise. A 2-minute analog doodle break filters stress signals and resets working memory. <span class="text-amber-300 font-mono text-xs bg-amber-900/30 px-1">MATH_NODE_007</span></p>
+                            <p class="text-sm text-gray-300 italic border-l-2 border-gray-600 pl-3">"Don't doomscroll to relax. Doodle. It lowers the barrier of entry for the next door knock."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Vector -->
+                <div class="glass-panel p-6 rounded-lg border-l-2 border-purple-500 hover:bg-[#1e293b] transition duration-300">
+                    <div class="flex items-start">
+                        <div class="bg-purple-900/30 p-3 rounded-full mr-4">
+                            <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-white mb-1">The Hero Presence (ψ-Vector)</h3>
+                            <p class="text-sm text-gray-400 mb-3">The Area Manager as a living billboard. "Zone in Public" model. <span class="text-purple-300 font-mono text-xs bg-purple-900/30 px-1">RESONANCE_001</span></p>
+                            <p class="text-sm text-gray-300 italic border-l-2 border-gray-600 pl-3">"The pyramid only stabilises when the apex is both performer and mirror. Let the team see you pull a lead when morale is low."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-gray-800 text-center p-4 mt-auto">
+        <p class="text-xs text-gray-500 font-mono">TPSai Operational Logic Embedded • Ŋ(z) System Active • © 2026</p>
+    </footer>
+
+    <!-- Logic Script -->
+    <script>
+        // Tab Navigation Logic
+        function openTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+
+        // Momentum Calculator Logic (The Ŋ(z) Math)
+        function calculateMomentum() {
+            const x = parseFloat(document.getElementById('bounceInput').value); // Bounce
+            const y = parseFloat(document.getElementById('rapportInput').value); // Rapport
+            const multiplier = parseFloat(document.getElementById('territoryInput').value);
+            const baseAOV = 300; // Base commission value proxy for math
+            
+            // Update UI Labels
+            document.getElementById('bounceVal').innerText = x + "s";
+            document.getElementById('rapportVal').innerText = y + "m";
+
+            // Calculate IC = (Y / X) * Multiplier * BaseValue
+            // Guard against divide by zero (though min is 10)
+            let rawMomentum = (y / x) * multiplier;
+            let commission = Math.round(rawMomentum * baseAOV);
+
+            // Cap the commission for realistic UI bounds or let it run
+            if (commission > 2500) commission = 2500;
+
+            // Update UI Output
+            document.getElementById('commissionOutput').innerText = "£" + commission.toLocaleString();
+
+            // State Logic
+            const stateTitle = document.getElementById('stateOutput');
+            const stateDesc = document.getElementById('stateDesc');
+
+            if (x > 90 && y < 15) {
+                stateTitle.innerText = "Fighting the Current";
+                stateTitle.className = "text-2xl font-bold text-red-500 glow-amber";
+                stateDesc.innerText = "High entropy detected. Energy expelled on 'windshield time'. Action: Relocate and reset.";
+            } else if (x > 60 && y >= 30) {
+                stateTitle.innerText = "Deep Anchor";
+                stateTitle.className = "text-2xl font-bold text-amber-400 glow-amber";
+                stateDesc.innerText = "Slow physical movement but high relational depth. Good for high-value Article 4 zones.";
+            } else if (x <= 45 && y >= 30) {
+                stateTitle.innerText = "Momentum Magic";
+                stateTitle.className = "text-2xl font-bold text-emerald-400 glow-emerald";
+                stateDesc.innerText = "Elite rhythm. High velocity paired with meaningful connection. Do not interrupt flow.";
+            } else if (x <= 45 && y < 20) {
+                stateTitle.innerText = "Surface Skipping";
+                stateTitle.className = "text-2xl font-bold text-cyan-400 glow-cyan";
+                stateDesc.innerText = "Moving fast but lacking the hook. Action: Slow down the pitch delivery.";
+            } else {
+                stateTitle.innerText = "System Normalizing";
+                stateTitle.className = "text-2xl font-bold text-gray-400";
+                stateDesc.innerText = "Baseline operations. Maintain rhythm and seek deep anchor opportunities.";
+            }
+        }
+
+        // Initialize calculator on load
+        document.addEventListener('DOMContentLoaded', calculateMomentum);
+    </script>
+</body>
+</html>
